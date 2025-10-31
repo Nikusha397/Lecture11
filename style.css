@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.sky .grass .road {
+  position: relative;
+}
+
+.sky {
+  background-color: skyblue;
+  height: 35%;
+}
+
+.cloud_one {
+  position: absolute;
+  width: 200px;
+  top: 50px;
+  opacity: 0.7;
+  animation-name: cloud;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.cloud_two {
+  position: absolute;
+  width: 200px;
+  opacity: 0.5;
+  top: 200px;
+  animation-name: cloud;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: reverse;
+}
+
+.grass {
+  height: 30%;
+  background-color: seagreen;
+}
+
+.tree1 {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  animation-name: tree;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+.tree2 {
+  position: absolute;
+  width: 300px;
+  top: 40%;
+  left: 30%;
+  animation-name: tree;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+.tree3 {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 70%;
+  animation-name: tree;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+.road {
+  height: 35%;
+  width: 100%;
+  background-color: dimgray;
+  border-top: 7px solid gray;
+  border-bottom: 7px solid gray;
+}
+
+.line {
+  border: 5px dashed white;
+  position: absolute;
+  width: 100%;
+  top: 82%;
+}
+
+.bike {
+  width: 250px;
+  left: 40%;
+  animation-name: vehicle;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  position: absolute;
+  display: inline-block;
+  animation-timing-function: ease-out;
+}
+
+.vehicle {
+  width: 250px;
+  animation-name: vehicle;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease-out;
+  position: absolute;
+  display: inline-block;
+}
+
+.car {
+  width: 250px;
+  position: absolute;
+  display: inline-block;
+  top: 80%;
+  left: 50%;
+  animation-name: vehicle;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease-out;
+}
+
+@keyframes vehicle {
+  0% {
+    transform: translateX(-2000px);
+  }
+  100% {
+    transform: translateX(2500px);
+  }
+}
+
+@keyframes tree {
+  0% {
+    transform: translateX(-2000px);
+  }
+  100% {
+    transform: translateX(2500px);
+  }
+}
+
+@keyframes cloud {
+  from {
+    right: -10%;
+  }
+  to {
+    right: 100%;
+  }
+}
